@@ -12,14 +12,26 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.acker.wallet.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_statistics"
+        android:name="com.acker.wallet.ui.statistics.StatisticsFragment"
+        android:label="@string/title_statistics"
+        tools:layout="@layout/fragment_statistics" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.acker.wallet.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_add"
+        android:name="com.acker.wallet.ui.add.AddFragment"
+        android:label="@string/title_add"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/navigation_currency"
+        android:name="com.acker.wallet.ui.currency.CurrencyFragment"
+        android:label="@string/title_currency"
+        tools:layout="@layout/fragment_currency" />
+
+    <fragment
+        android:id="@+id/navigation_user"
+        android:name="com.acker.wallet.ui.user.UserFragment"
+        android:label="@string/title_user"
+        tools:layout="@layout/fragment_user" />
 </navigation>
