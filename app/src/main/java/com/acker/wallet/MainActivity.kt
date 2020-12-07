@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide();
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
@@ -22,5 +23,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_statistics, R.id.navigation_add, R.id.navigation_currency, R.id.navigation_user))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
 }
