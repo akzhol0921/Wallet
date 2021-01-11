@@ -36,9 +36,9 @@ class HomeFragment : Fragment() {
     private fun generateList(): List<Bills> {
         val list = ArrayList<Bills>()
         list.add(Bills("Rent Bill","January 01, 2021",R.drawable.ic_action_home))
-        list.add(Bills("Rent Bill","January 01, 2021",R.drawable.ic_action_home))
-        list.add(Bills("Rent Bill","January 01, 2021",R.drawable.ic_action_home))
-        list.add(Bills("Rent Bill","January 01, 2021",R.drawable.ic_action_home))
+        list.add(Bills("Water Payment","January 01, 2021",R.drawable.iconheart))
+        list.add(Bills("Subscription","January 01, 2021",R.drawable.shoppingcart))
+        list.add(Bills("Tuition Fee","January 01, 2021",R.drawable.paymenticon))
         return list
     }
 }
