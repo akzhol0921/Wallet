@@ -21,6 +21,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:fontFamily="@font/avenir"
         android:inputType="textPersonName"
         android:text="USD"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +34,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:fontFamily="@font/avenir"
         android:inputType="textPersonName"
         android:text="PLN"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/avenir"
         android:text="Please Write Base Currency "
         app:layout_constraintStart_toStartOf="@+id/BaseCur"
         app:layout_constraintTop_toBottomOf="@+id/curchart" />
@@ -52,6 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/avenir"
         android:text="Please Write Target Currency"
         app:layout_constraintStart_toStartOf="@+id/TargetCur"
         app:layout_constraintTop_toBottomOf="@+id/BaseCur" />
@@ -61,6 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/avenir"
         android:text="Query"
         app:layout_constraintStart_toStartOf="@+id/TargetCur"
         app:layout_constraintTop_toBottomOf="@+id/TargetCur" />
