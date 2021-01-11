@@ -38,10 +38,10 @@ class HomeFragment : Fragment() {
 
     private fun generateList(): List<Bills> {
         val list = ArrayList<Bills>()
-        for (i in 0 until 20) {
-            val item = Bills("Bill 1", "July 01, 2020")
-            list += item
-        }
+        list.add(Bills("Rent Bill","January 01, 2021"))
+        list.add(Bills("Rent Bill","January 01, 2021"))
+        list.add(Bills("Rent Bill","January 01, 2021"))
+        list.add(Bills("Rent Bill","January 01, 2021"))
         return list
     }
 }
