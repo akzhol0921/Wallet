@@ -14,7 +14,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginEnd="8dp"
-            app:srcCompat="@drawable/ic_bill_home" />
+            app:srcCompat="@drawable/shoppingcart" />
 
         <TextView
             android:id="@+id/textView1"
@@ -32,5 +32,9 @@
             android:layout_toEndOf="@id/imageView"
             android:text="January 01. 2021" />
 
+
+
     </RelativeLayout>
+
+
 </androidx.cardview.widget.CardView>
