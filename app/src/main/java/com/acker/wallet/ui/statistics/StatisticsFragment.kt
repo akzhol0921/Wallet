@@ -19,6 +19,8 @@ import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import kotlinx.android.synthetic.main.fragment_statistics.*
+import java.lang.Boolean.FALSE
+import java.lang.Boolean.TRUE
 
 
 class StatisticsFragment : Fragment() {
@@ -36,19 +38,15 @@ class StatisticsFragment : Fragment() {
         return root
     }
 
-    private fun generateList(): List<Payments> {
-        val list = ArrayList<Payments>()
-        for (i in 0 until 20) {
-            val item = Payments("Bill $i", "July 01, 2020",2100f)
-            list += item
-        }
-        return list
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val exampleList = generateList()
+        val exampleList = ArrayList<Payments>()
+        exampleList.add(Payments(FALSE,"Sent to Nurdaulet", "July 01, 2020",100f))
+        exampleList.add(Payments(TRUE,"Recieve from Amankumar", "July 01, 2020",200f))
+        exampleList.add(Payments(TRUE,"Refund from Aliexpress", "July 01, 2020",50f))
+
+
         payment.adapter = PaymentAdapter(exampleList)
         payment.layoutManager = LinearLayoutManager(activity)
         payment.setHasFixedSize(true)
