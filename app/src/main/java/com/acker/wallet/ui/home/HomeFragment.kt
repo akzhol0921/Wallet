@@ -8,7 +8,10 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.acker.wallet.R
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -23,5 +26,22 @@ class HomeFragment : Fragment() {
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val exampleList = generateList()
+        upcomingbill.adapter = BillsAdapter(exampleList)
+        upcomingbill.layoutManager = LinearLayoutManager(activity)
+        upcomingbill.setHasFixedSize(true)
+    }
+
+    private fun generateList(): List<Bills> {
+        val list = ArrayList<Bills>()
+        for (i in 0 until 20) {
+            val item = Bills("Bill 1", "July 01, 2020")
+            list += item
+        }
+        return list
     }
 }

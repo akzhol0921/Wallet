@@ -9,4 +9,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main_color">#9FA8DA</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#81D4FA</color>
 </resources>
