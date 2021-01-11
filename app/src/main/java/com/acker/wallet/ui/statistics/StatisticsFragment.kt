@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.acker.wallet.R
@@ -20,8 +18,6 @@ import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
-import kotlinx.android.synthetic.main.fragment_currency.*
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_statistics.*
 
 
@@ -40,10 +36,10 @@ class StatisticsFragment : Fragment() {
         return root
     }
 
-    private fun generateList(): List<Bills> {
-        val list = ArrayList<Bills>()
+    private fun generateList(): List<Payments> {
+        val list = ArrayList<Payments>()
         for (i in 0 until 20) {
-            val item = Bills("Bill $i", "July 01, 2020")
+            val item = Payments("Bill $i", "July 01, 2020",2100f)
             list += item
         }
         return list
@@ -53,7 +49,7 @@ class StatisticsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val exampleList = generateList()
-        payment.adapter = BillsAdapter(exampleList)
+        payment.adapter = PaymentAdapter(exampleList)
         payment.layoutManager = LinearLayoutManager(activity)
         payment.setHasFixedSize(true)
 

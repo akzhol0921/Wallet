@@ -4,12 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.acker.wallet.R
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -38,10 +35,10 @@ class HomeFragment : Fragment() {
 
     private fun generateList(): List<Bills> {
         val list = ArrayList<Bills>()
-        list.add(Bills("Rent Bill","January 01, 2021"))
-        list.add(Bills("Rent Bill","January 01, 2021"))
-        list.add(Bills("Rent Bill","January 01, 2021"))
-        list.add(Bills("Rent Bill","January 01, 2021"))
+        list.add(Bills("Rent Bill","January 01, 2021",R.drawable.ic_action_home))
+        list.add(Bills("Rent Bill","January 01, 2021",R.drawable.ic_action_home))
+        list.add(Bills("Rent Bill","January 01, 2021",R.drawable.ic_action_home))
+        list.add(Bills("Rent Bill","January 01, 2021",R.drawable.ic_action_home))
         return list
     }
 }
