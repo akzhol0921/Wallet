@@ -8,10 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.acker.wallet.R
+import com.acker.wallet.ui.statistics.Payments
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
-
+    val list = ArrayList<Bills>()
     private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
@@ -27,18 +28,13 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val exampleList = generateList()
-        upcomingbill.adapter = BillsAdapter(exampleList)
-        upcomingbill.layoutManager = LinearLayoutManager(activity)
-        upcomingbill.setHasFixedSize(true)
-    }
-
-    private fun generateList(): List<Bills> {
-        val list = ArrayList<Bills>()
         list.add(Bills("Rent Bill","January 01, 2021",R.drawable.iconhome))
         list.add(Bills("Water Payment","January 01, 2021",R.drawable.iconheart))
         list.add(Bills("Subscription","January 01, 2021",R.drawable.shoppingcart))
         list.add(Bills("Tuition Fee","January 01, 2021",R.drawable.paymenticon))
-        return list
+        upcomingbill.adapter = BillsAdapter(list)
+        upcomingbill.layoutManager = LinearLayoutManager(activity)
+        upcomingbill.setHasFixedSize(true)
     }
+
 }

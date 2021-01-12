@@ -9,14 +9,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.acker.wallet.R
-import com.acker.wallet.ui.home.Bills
-import com.acker.wallet.ui.home.BillsAdapter
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import kotlinx.android.synthetic.main.fragment_statistics.*
 import java.lang.Boolean.FALSE
@@ -24,6 +23,7 @@ import java.lang.Boolean.TRUE
 
 
 class StatisticsFragment : Fragment() {
+    val list = ArrayList<Payments>()
 
     private lateinit var statisticsViewModel: StatisticsViewModel
 
@@ -37,17 +37,16 @@ class StatisticsFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_statistics, container, false)
         return root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val exampleList = ArrayList<Payments>()
-        exampleList.add(Payments(FALSE,"Sent to Nurdaulet", "July 01, 2020",100f))
-        exampleList.add(Payments(TRUE,"Recieve from Amankumar", "July 01, 2020",200f))
-        exampleList.add(Payments(TRUE,"Refund from Aliexpress", "July 01, 2020",50f))
+
+        list.add(Payments(FALSE,"Sent to Nurdaulet", "July 01, 2020",100f))
+        list.add(Payments(TRUE,"Recieve from Amankumar", "July 01, 2020",200f))
+        list.add(Payments(TRUE,"Refund from Aliexpress", "July 01, 2020",50f))
 
 
-        payment.adapter = PaymentAdapter(exampleList)
+        payment.adapter = PaymentAdapter(list)
         payment.layoutManager = LinearLayoutManager(activity)
         payment.setHasFixedSize(true)
 

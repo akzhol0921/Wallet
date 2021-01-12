@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.acker.wallet.R
 
-class PaymentAdapter(private val PaymentList: List<Payments>): RecyclerView.Adapter<PaymentAdapter.PaymentViewHolder>() {
+class PaymentAdapter(private val PaymentList: MutableList<Payments>): RecyclerView.Adapter<PaymentAdapter.PaymentViewHolder>() {
     class PaymentViewHolder(PaymentView: View) : RecyclerView.ViewHolder(PaymentView) {
         val img: ImageView = PaymentView.findViewById(R.id.imageView1)
         val textView1 : TextView = PaymentView.findViewById(R.id.textView1)
